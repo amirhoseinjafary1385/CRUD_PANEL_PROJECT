@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+body{
+background-color: greenyellow;
+}
+form{
+text-align: center;
+color: rgb(119, 54, 54);
+font-size: large;
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="user" style="text-align: center;">Change User</h1>
+        <form action="{% url 'upRec' enjoy.id %}" method="POST">
+            {% csrf_token %}
+            <label for="">First Name</label><br>
+            <input type="text" name="first" value="{{ enjoy.firstname }}"><br>
+            <label for="">Last Name</label><br>
+            <input type="text" name="last" value="{{ enjoy.lastname }}"><br>
+            <label for="">Country</label><br>
+            <input type="text" name="country" value="{{ enjoy.country }}"><br>
+            <div>
+            <button type="submit" id="submit" style="margin: 10px;">Change</button>
+            </div>
+        </form>
+    </div> 
+</body>
+</html>
+  
+</html>

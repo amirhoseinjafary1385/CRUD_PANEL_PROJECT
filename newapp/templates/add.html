@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+    body {
+    background-color:   orange;
+    text-align: center;
+    }
+    button {
+        margin: 10px;
+    }
+    .user{
+       color: rgb(72, 133, 15); 
+    }
+    </style>
+
+</head>
+<body>
+    <div>
+    <h1 class="user" style="text-align: center;">Add User</h1>
+    <form action="{% url 'addRec' %}" method="POST" style="text-align: center;">
+        {% csrf_token %}
+        <label for="">First Name</label><br>
+        <input type="text" name="first" placeholder="type..."><br>
+        <label for="">Last Name</label><br>
+        <input type="text" name="last" placeholder="type..."><br>
+        <label for="">country</label><br>
+        <input type="text" name="country" placeholder="type..."><br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    </div> 
+</body>
+</html>
