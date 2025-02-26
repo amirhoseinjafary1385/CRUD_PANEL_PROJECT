@@ -1,5 +1,8 @@
-pycache/
 *.pyc
+*.pyo
+__pycache__/
 db.sqlite3
 .env
-venv/
+.vscode/
+.idea/
+.DS_Store
